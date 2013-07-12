@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Jaraoke - An HTML5 &lt;audio&gt; Tag Demo</title>
+
+<link rel="stylesheet" type="text/css" media="screen, projection" href="css/style.css" />
+
+<script type="text/javascript" src="js/prototype.js"></script>
+<script type="text/javascript" src="js/scriptaculous.js"></script>
+<script type="text/javascript" src="js/transitions.js"></script>
+
+<script type="text/javascript" src="js/jaraoke.js"></script>
+
+<script type="text/javascript" src="js/retweet.js"></script>
+
+</head>
+
+<body>
+
+<script type="text/javascript" 
+src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js"> </script>
+ 
+<div id="CFPlaceholder"></div>
+
+<script>
+ CFInstall.check({
+    node: "CFPlaceholder",
+    destination: "http://randallagordon.com/jaraoke/"
+  });
+</script>
+
+<div id="bodyContainer">
+
+<div id="headerContainer" class="mainContainer clearfix">
+	<p id="bob"></p>
+	<p id="playbackTime"></p>
+</div>
+
+<div id="contentContainer" class="mainContainer clearfix">
+	<audio id='apN' autobuffer="true">
+		<source src='audio/discipline_mixdown-nvocal.ogg' type='audio/ogg; codecs="vorbis"'>
+		<source src='audio/discipline_mixdown-nvocal.mp3' type='audio/mp3; codecs="mp3"'>
+		Your browser sucks and can't play Ogg Vorbis audio embedded with the <code>audio</code> HTML5 element. Get <a href="http://getfirefox.com/">Firefox</a>.
+	</audio>
+	<audio id='apW' autobuffer="true">
+		<source src='audio/discipline_mixdown-wvocal.ogg' type='audio/ogg; codecs="vorbis"'>
+		<source src='audio/discipline_mixdown-wvocal.mp3' type='audio/mp3; codecs="mp3"'>
+		Your browser sucks and can't play Ogg Vorbis audio embedded with the <code>audio</code> HTML5 element. Get <a href="http://getfirefox.com/">Firefox</a>.
+	</audio>
+	<a id="togglePlay" href="#">Play/Pause</a>
+	<a id="toggleVocal" href="#">Toggle Vocals</a>
+	
+	<ul id="lyricsList"></ul>
+</div>
+
+<div id="footerContainer" class="mainContainer clearfix">
+	<p>Feel free to use Jaraoke's code as a jumping off point for playing with the HTML5 &lt;audio&gt; tag. I wrote a <a href="http://randallagordon.com/blog/2009/07/19/jaraoke-html5-audio-tag-demo/">post on my blog</a> with some explanation as to how this functions.</p>
+	<p id="ccLicense"><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/us/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/us/88x31.png" /></a><span class="licenseSubtext"><br /><span xmlns:dc="http://purl.org/dc/elements/1.1/" href="http://purl.org/dc/dcmitype/InteractiveResource" property="dc:title" rel="dc:type">Jaraoke</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://randallagordon.com/" property="cc:attributionName" rel="cc:attributionURL">Randall A. Gordon</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/us/">Creative Commons Attribution-Noncommercial-Share Alike 3.0 United States License</a>.<br />Based on a work at <a xmlns:dc="http://purl.org/dc/elements/1.1/" href="http://randallagordon.com/jaraoke/" rel="dc:source">randallagordon.com/jaraoke</a>.</span></p>
+	<p>Song: "Discipline" by Nine Inch Nails<br/>Check out <a href="http://remix.nin.com/">http://remix.nin.com/</a> and <a href="http://www.ninwiki.com/">http://www.ninwiki.com/</a>.<br/>This is possible thanks to such great projects and forward-thinking.</p>
+	<p><a class="retweet self" href=""></a></p>
+</div>
+
+</div>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-1768996-4");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+</html>

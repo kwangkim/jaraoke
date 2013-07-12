@@ -1,0 +1,2 @@
+AddType audio/ogg ogg
+SetEnv no-gzip dont-vary
